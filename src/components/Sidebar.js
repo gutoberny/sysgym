@@ -55,7 +55,7 @@ function Sidebar({ currentPage, setCurrentPage, language, setLanguage }) {
     },
     { id: "students", icon: <PeopleIcon />, text: t("sidebar.students") },
     { id: "finances", icon: <AttachMoneyIcon />, text: t("sidebar.finances") },
-    { id: "schedule", icon: <EventIcon />, text: t("sidebar.schedule") },
+    // { id: "schedule", icon: <EventIcon />, text: t("sidebar.schedule") },
     { id: "reports", icon: <AssessmentIcon />, text: t("sidebar.reports") },
   ];
 

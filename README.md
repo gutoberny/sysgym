@@ -8,7 +8,7 @@
 
 Sistema completo de gerenciamento para academias que integra controle de alunos, digitalização de treinos e gestão financeira, proporcionando uma solução abrangente para proprietários de academias.
 
-🔍 **[Ver Demo ao Vivo](https://sysgym.vercel.app/)**
+🔍 **[Ver Demo ao Vivo](https://sysgym-seven.vercel.app/)**
 
 ## 📋 Funcionalidades
 
