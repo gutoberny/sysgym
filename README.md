@@ -87,7 +87,13 @@ src/
 
 ## 📱 Screenshots
 
-_(Aqui você pode adicionar screenshots da aplicação quando estiver pronta)_
+![Screenshot from 2025-04-17 11-41-01](https://github.com/user-attachments/assets/7cb9e6ac-a025-41b0-ac0c-9b7fd5989126)
+![Screenshot from 2025-04-17 11-41-06](https://github.com/user-attachments/assets/81706414-5f31-4f82-9605-21812171ad69)
+![Screenshot from 2025-04-17 11-41-11](https://github.com/user-attachments/assets/36848526-3df6-4934-a297-bea026b663ef)
+![Screenshot from 2025-04-17 11-41-15](https://github.com/user-attachments/assets/1b714e46-c6e0-4974-9556-cb71a7b508ed)
+![Screenshot from 2025-04-17 11-41-19](https://github.com/user-attachments/assets/8b5d04fa-e831-4831-bb27-e31e5724400b)
+![Screenshot from 2025-04-17 11-41-23](https://github.com/user-attachments/assets/585c764b-1431-4df6-a54a-509d7215b1b1)
+
 
 ## 📄 Licença
 
