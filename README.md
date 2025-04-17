@@ -95,7 +95,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE pa
 
 ## 👤 Autor
 
-Desenvolvido por [Seu Nome](https://github.com/seu-usuario) como projeto de portfólio.
+Desenvolvido por [Gustavo Berny](https://github.com/gutoberny) como projeto de portfólio.
 
 ---
 
