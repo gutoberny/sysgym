@@ -1,17 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
-  TextField,
   Button,
   Typography,
   Paper,
   Container,
-  Alert,
-  InputAdornment,
-  IconButton,
   useTheme,
 } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../utils/AuthContext";
 
@@ -20,28 +15,16 @@ const Login = () => {
   const { login } = useAuth();
   const theme = useTheme();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
+  // Auto-login predefinido para modo de demonstração
   const handleLogin = (e) => {
     e.preventDefault();
-    setError("");
 
-    if (!email || !password) {
-      setError(t("login.fillAllFields"));
-      return;
-    }
+    // Login automático como administrador
+    const demoEmail = "admin@demo.com";
+    const demoPassword = "demo123";
 
-    const result = login(email, password);
-    if (!result.success) {
-      setError(t("login.invalidCredentials"));
-    }
-  };
-
-  const handleTogglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+    // Chamar a função de login com credenciais pré-definidas
+    login(demoEmail, demoPassword);
   };
 
   return (
@@ -67,50 +50,15 @@ const Login = () => {
             {t("login.title")}
           </Typography>
 
-          {error && (
-            <Alert severity="error" sx={{ mb: 2 }}>
-              {error}
-            </Alert>
-          )}
+          <Typography
+            variant="body2"
+            align="center"
+            sx={{ mb: 3, color: "text.secondary" }}
+          >
+            Versão de demonstração - Acesso sem credenciais
+          </Typography>
 
           <Box component="form" onSubmit={handleLogin} sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label={t("login.email")}
-              name="email"
-              autoComplete="email"
-              autoFocus
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label={t("login.password")}
-              type={showPassword ? "text" : "password"}
-              id="password"
-              autoComplete="current-password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleTogglePasswordVisibility}
-                      edge="end"
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
             <Button
               type="submit"
               fullWidth

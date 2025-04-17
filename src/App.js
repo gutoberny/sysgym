@@ -15,6 +15,15 @@ import "./i18n";
 import { useTranslation } from "react-i18next";
 import { AuthProvider, useAuth } from "./utils/AuthContext";
 
+// Verifica se o site está em modo de demonstração
+const isDemoMode = () => {
+  // Você pode implementar lógica mais complexa aqui se necessário
+  return (
+    window.location.hostname.includes("vercel.app") ||
+    process.env.NODE_ENV === "development"
+  );
+};
+
 function AppContent() {
   // Estado para o tema
   const [theme, setTheme] = useState("light");
@@ -25,7 +34,7 @@ function AppContent() {
   // Estado para o idioma
   const [language, setLanguage] = useState("pt");
   const { i18n } = useTranslation();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, login } = useAuth();
 
   // Carregar preferência de tema e idioma do localStorage
   useEffect(() => {
@@ -41,10 +50,29 @@ function AppContent() {
     }
   }, [i18n]);
 
+  // Efeito para autologin em modo de demonstração
+  useEffect(() => {
+    if (isDemoMode() && !isAuthenticated) {
+      // Login automático no modo de demonstração
+      const demoEmail = "admin@demo.com";
+      const demoPassword = "demo123";
+
+      // Tentar fazer login automático após um pequeno atraso
+      const timerId = setTimeout(() => {
+        login(demoEmail, demoPassword);
+      }, 500); // Pequeno delay para permitir que o sistema carregue
+
+      return () => clearTimeout(timerId);
+    }
+  }, [isAuthenticated, login]);
+
   // Efeito para redirecionar para login se não estiver autenticado
   useEffect(() => {
     if (!isAuthenticated && currentPage !== "login") {
       setCurrentPage("login");
+    } else if (isAuthenticated && currentPage === "login") {
+      // Redirecionar para dashboard quando fizer login
+      setCurrentPage("dashboard");
     }
   }, [isAuthenticated, currentPage]);
 

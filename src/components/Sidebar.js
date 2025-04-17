@@ -13,6 +13,8 @@ import {
   Select,
   MenuItem,
   Button,
+  Typography,
+  Chip,
 } from "@mui/material";
 import {
   Dashboard as DashboardIcon,
@@ -24,17 +26,25 @@ import {
   Assessment as AssessmentIcon,
   Language as LanguageIcon,
   ManageAccounts as ManageAccountsIcon,
-  Logout as LogoutIcon,
+  Info as InfoIcon,
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../utils/AuthContext";
 
 const drawerWidth = 240;
 
+// Verifica se o site está em modo de demonstração
+const isDemoMode = () => {
+  return (
+    window.location.hostname.includes("vercel.app") ||
+    process.env.NODE_ENV === "development"
+  );
+};
+
 function Sidebar({ currentPage, setCurrentPage, language, setLanguage }) {
   const { t } = useTranslation();
   const theme = useTheme();
-  const { hasRole, logout } = useAuth();
+  const { hasRole } = useAuth();
 
   const menuItems = [
     { id: "dashboard", icon: <DashboardIcon />, text: t("sidebar.dashboard") },
@@ -64,12 +74,6 @@ function Sidebar({ currentPage, setCurrentPage, language, setLanguage }) {
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
-  };
-
-  const handleLogout = () => {
-    logout();
-    // Após logout, redirecionar para a página de login
-    setCurrentPage("login");
   };
 
   return (
@@ -167,15 +171,22 @@ function Sidebar({ currentPage, setCurrentPage, language, setLanguage }) {
       </List>
 
       <Box sx={{ mt: "auto", p: 2 }}>
-        <Button
-          fullWidth
-          variant="outlined"
+        <Chip
+          icon={<InfoIcon />}
+          label="Modo de Demonstração"
           color="primary"
-          startIcon={<LogoutIcon />}
-          onClick={handleLogout}
+          variant="outlined"
+          sx={{ width: "100%", mb: 1 }}
+        />
+        <Typography
+          variant="caption"
+          color="text.secondary"
+          align="center"
+          sx={{ display: "block" }}
         >
-          {t("login.logout")}
-        </Button>
+          Versão de portfólio com acesso livre para demonstração das
+          funcionalidades
+        </Typography>
       </Box>
     </Drawer>
   );

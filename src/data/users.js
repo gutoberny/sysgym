@@ -24,6 +24,14 @@ export const users = [
     role: "atendente",
     createdAt: "2023-01-03T00:00:00.000Z",
   },
+  {
+    id: 4,
+    name: "Usuário Demo",
+    email: "admin@demo.com",
+    password: "demo123",
+    role: "admin",
+    createdAt: "2023-01-04T00:00:00.000Z",
+  },
 ];
 
 // Funções auxiliares para manipulação de usuários
