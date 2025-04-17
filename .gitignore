@@ -5,7 +5,7 @@ node_modules
 
 # Testes
 /coverage
-
+VERCEL_DEPLOY.md
 # Arquivos de build
 /build
 /dist
