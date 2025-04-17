@@ -4,8 +4,11 @@
 ![React](https://img.shields.io/badge/React-v18.2-61DAFB?logo=react)
 ![Material UI](https://img.shields.io/badge/Material_UI-v5.14-0081CB?logo=material-ui)
 ![i18n](https://img.shields.io/badge/i18next-Multilíngue-yellow)
+![Deployment](https://img.shields.io/badge/Vercel-Deployed-success?logo=vercel)
 
 Sistema completo de gerenciamento para academias que integra controle de alunos, digitalização de treinos e gestão financeira, proporcionando uma solução abrangente para proprietários de academias.
+
+🔍 **[Ver Demo ao Vivo](https://sysgym.vercel.app/)**
 
 ## 📋 Funcionalidades
 
@@ -46,13 +49,14 @@ Sistema completo de gerenciamento para academias que integra controle de alunos,
 - **Internacionalização**: i18next para suporte multilíngue
 - **Gráficos**: MUI X-Charts para visualização de dados
 - **Tabelas**: MUI DataGrid para exibição e manipulação de dados tabulares
+- **Deploy**: Vercel para hospedagem e implantação contínua
 
-## 🚀 Como Executar
+## 🚀 Como Executar Localmente
 
 1. Clone o repositório
 
    ```bash
-   git clone https://github.com/seu-usuario/sysgym.git
+   git clone https://github.com/gutoberny/sysgym.git
    cd sysgym
    ```
 
@@ -69,6 +73,22 @@ Sistema completo de gerenciamento para academias que integra controle de alunos,
    ```
 
 4. Acesse http://localhost:3000 no navegador
+
+## 🌐 Deploy na Vercel
+
+Este projeto está configurado para ser facilmente implantado na Vercel:
+
+1. Faça fork deste repositório para sua conta do GitHub
+
+2. Acesse [Vercel](https://vercel.com/) e faça login com sua conta GitHub
+
+3. Clique em "New Project" e selecione o repositório
+
+4. A Vercel detectará automaticamente que é um projeto React
+
+5. Clique em "Deploy" e aguarde a conclusão do processo
+
+6. Acesse sua aplicação pelo domínio fornecido pela Vercel!
 
 ## 📂 Estrutura do Projeto
 
