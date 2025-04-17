@@ -1,43 +1,102 @@
-# Sistema de Gerenciamento de Academia (SysGym)
+# SysGym - Sistema Completo de Gestão para Academias
 
-Sistema de gerenciamento de academia que digitaliza as folhas físicas de treino, permitindo um controle mais eficiente dos exercícios e progresso dos alunos.
+![Sistema de Gestão para Academias](https://img.shields.io/badge/Projeto-Portfólio-blue)
+![React](https://img.shields.io/badge/React-v18.2-61DAFB?logo=react)
+![Material UI](https://img.shields.io/badge/Material_UI-v5.14-0081CB?logo=material-ui)
+![i18n](https://img.shields.io/badge/i18next-Multilíngue-yellow)
 
-## Funcionalidades
+Sistema completo de gerenciamento para academias que integra controle de alunos, digitalização de treinos e gestão financeira, proporcionando uma solução abrangente para proprietários de academias.
 
-- **Interface Moderna e Responsiva**: Baseada em Material UI, adaptando-se a diferentes tamanhos de tela
-- **Suporte a Múltiplos Idiomas**: Português (PT), Inglês (EN) e Espanhol (ES)
-- **Temas Claro e Escuro**: Alternância entre os modos para melhor experiência do usuário
-- **Dados do Aluno**: Registro completo com nome, idade, objetivos e frequência
-- **Tabela de Exercícios**: Organizada por grupos musculares com todas as informações necessárias
-- **Observações**: Campo para registrar lesões ou limitações específicas do aluno
+## 📋 Funcionalidades
 
-## Tecnologias Utilizadas
+### 💪 Módulo de Treinos
 
-- **React**: Biblioteca JavaScript para construção da interface
-- **Material UI**: Framework de componentes React para design moderno
-- **i18next**: Biblioteca para internacionalização
-- **MUI X-Date-Pickers**: Componentes avançados de data do Material UI
+- **Digitalização de Treinos**: Substitui as folhas físicas por um sistema digital intuitivo
+- **Modelos de Treino**: Biblioteca de modelos para diferentes níveis e objetivos
+- **Histórico de Treinos**: Acompanhamento da evolução dos alunos ao longo do tempo
 
-## Como Executar
+### 👥 Gestão de Alunos
+
+- **Cadastro Completo**: Informações detalhadas de cada aluno, incluindo dados de contato
+- **Status de Pagamento**: Visualização rápida da situação financeira do aluno
+- **Filtros Avançados**: Busca por nome, plano, status de pagamento e outros critérios
+
+### 💰 Gestão Financeira
+
+- **Controle de Mensalidades**: Registro e acompanhamento de pagamentos
+- **Despesas e Receitas**: Fluxo de caixa completo categorizado
+- **Alertas de Inadimplência**: Identificação automática de pagamentos atrasados
+
+### 📊 Relatórios
+
+- **Relatórios Financeiros**: Análise de receitas e despesas com visualização gráfica
+- **Relatório de Inadimplência**: Visão geral e detalhada dos pagamentos pendentes
+- **Exportação de Dados**: Possibilidade de baixar relatórios para análise externa
+
+## 🎨 Interface
+
+- **Design Responsivo**: Adaptação perfeita a desktop, tablets e smartphones
+- **Temas Claro e Escuro**: Alternância entre modos para melhor experiência do usuário
+- **Múltiplos Idiomas**: Suporte a Português, Inglês e Espanhol
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: React, Material UI, MUI X-Charts, MUI X-Date-Pickers
+- **Estilização**: Material UI com Styled Components
+- **Internacionalização**: i18next para suporte multilíngue
+- **Gráficos**: MUI X-Charts para visualização de dados
+- **Tabelas**: MUI DataGrid para exibição e manipulação de dados tabulares
+
+## 🚀 Como Executar
 
 1. Clone o repositório
-2. Instale as dependências:
+
+   ```bash
+   git clone https://github.com/seu-usuario/sysgym.git
+   cd sysgym
    ```
+
+2. Instale as dependências
+
+   ```bash
    npm install
    ```
-3. Inicie o servidor de desenvolvimento:
-   ```
+
+3. Inicie o servidor de desenvolvimento
+
+   ```bash
    npm start
    ```
+
 4. Acesse http://localhost:3000 no navegador
 
-## Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
-- `/src/components`: Componentes da interface do usuário
-- `/src/themes`: Definições de temas claro e escuro
-- `/src/locales`: Arquivos de tradução para os idiomas suportados
-- `/src/data`: Dados estáticos como listas de exercícios
+```
+src/
+├── components/         # Componentes da interface
+│   ├── reports/        # Componentes de relatórios
+│   └── ...
+├── data/               # Dados simulados para demonstração
+├── locales/            # Arquivos de tradução (PT, EN, ES)
+├── themes/             # Definições de temas claro e escuro
+├── utils/              # Funções utilitárias e contextos
+├── App.js              # Componente principal
+└── index.js            # Ponto de entrada
+```
 
-## Notas de Implementação
+## 📱 Screenshots
 
-Este projeto foi desenvolvido para digitalizar as folhas de treino físicas mantendo sua estrutura familiar e ampliando suas capacidades através da tecnologia digital.
+_(Aqui você pode adicionar screenshots da aplicação quando estiver pronta)_
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para mais detalhes.
+
+## 👤 Autor
+
+Desenvolvido por [Seu Nome](https://github.com/seu-usuario) como projeto de portfólio.
+
+---
+
+⭐️ Se este projeto foi útil para você, considere dar uma estrela no GitHub!
